@@ -6,3 +6,9 @@ B = A - B
 A = A - B
 print(A)
 print(B)
+
+#lab 3, task 4
+x = int(input("Введите число "))
+y = 0
+y = 3 * x ** 6 - 6 * x ** 2 - 7
+print("Значение фунцкии у равно",y)
