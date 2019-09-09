@@ -1,0 +1,8 @@
+#lab 3, task 1
+A = int(input("Введите число "))
+B = int(input("Введите число "))
+A = A + B
+B = A - B
+A = A - B
+print(A)
+print(B)
