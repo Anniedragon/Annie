@@ -1,0 +1,28 @@
+//lab 1, task 1
+#include <iostream>
+using namespace std;
+int main() {
+  float a, b, c, temp;
+  cin >> a;
+  cin >> b;
+  cin >> c;
+  if (a > temp) {
+   temp = a;
+  }
+   if (b > temp) {
+   temp = b;
+  }
+   if (c > temp) {
+   temp = c;
+  }
+  cout << "Максимальное:" << temp << endl;
+  temp=a;
+   
+   if ( temp>b ) {
+   temp = b;
+  }
+   if ( temp>c) {
+   temp = c;
+  }
+ cout << "Минимальное:" << temp << endl; 
+}
