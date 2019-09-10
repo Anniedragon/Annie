@@ -26,3 +26,41 @@ int main() {
   }
  cout << "Минимальное:" << temp << endl; 
 }
+
+//lab 1, task 2
+#include <iostream>
+using namespace std;
+int main() {
+  int a, b, c;
+  cin >> a;
+  cin >> b;
+  cin >> c;
+  if (a > 2 and a < 5) {
+    cout << a << " принадлежит промежутку от 2 до 5" << endl;
+  }
+  if (b > 2 and b < 5) {
+    cout << b << " принадлежит промежутку от 2 до 5" << endl;
+  } 
+  if (c > 2 and c < 5) {
+    cout << c << " принадлежит промежутку от 2 до 5" << endl;  
+  } 
+  if (a == 2 || a == 5) {
+    cout << a << " лежит на границе" << endl;
+  }
+  if (b == 2 || b == 5) {
+    cout << b << " лежит на границе" << endl;
+  } 
+  if (c == 2 || c == 5) {
+    cout << c << " лежит на границе" << endl;  
+  } 
+ if (a < 2 || a > 5) {
+    cout << a << " не принадлежит промежутку от 2 до 5" << endl;
+  }
+  if (b < 2 || b > 5) {
+    cout << b << " не принадлежит промежутку от 2 до 5" << endl; 
+  } 
+  if (c < 2 || c > 5) {
+    cout << c << " не принадлежит промежутку от 2 до 5" << endl; 
+  } 
+  return 0;
+}
