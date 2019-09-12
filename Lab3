@@ -7,6 +7,19 @@ A = A - B
 print(A)
 print(B)
 
+#lab 3, task 2
+A = int(input("Введите число А "))
+B = int(input("Введите число B "))
+C = int(input("Введите число C "))
+temp = 0
+temp = A
+A = B
+B = C
+C = temp
+print(A)
+print(B)
+print(C)
+
 #lab 3, task 4
 x = int(input("Введите число "))
 y = 0
