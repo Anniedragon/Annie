@@ -20,6 +20,19 @@ print(A)
 print(B)
 print(C)
 
+#lab 3, task 3
+A = int(input("Введите число А "))
+B = int(input("Введите число B "))
+C = int(input("Введите число C "))
+temp = 0
+temp = A
+A = C
+C = B
+B = temp
+print("A стало",A)
+print("В стало",B)
+print("С стало",C)
+
 #lab 3, task 4
 x = int(input("Введите число "))
 y = 0
