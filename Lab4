@@ -1,0 +1,16 @@
+//lab 4, task 1
+#include <iostream>
+using namespace std;
+int main() {
+  float a;
+  float R;
+  cout << "Введите угол a " << endl;
+  cin >> a;
+  while (a < 0 || a > 360) {
+   cout << "Введите угол" << endl;
+   cin >> a;
+  }
+  R = a * (3.14 / 180);
+  cout << "Угол а в радианах равен " << R << endl;
+  return 0;
+}
