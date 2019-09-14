@@ -26,7 +26,7 @@ c = int(input("Введите число для точки C, причем А < 
 d1 = 0
 d2 = 0
 while True :
-  if (a < c < b) or (b > c> a) :
+  if (a < c < b) or (b > c > a) :
     break
   else :
     c = int(input("Введите число для точки C, причем А < C < B или В < C < A "))
