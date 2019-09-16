@@ -15,19 +15,14 @@ int main() {
   return 0;
 }
 
-//lab 4, task 2 STILL IN WORK!!!
+//lab 4, task 2 
 #include <iostream>
 using namespace std;
 int main() {
   float a;
   float D;
-  cout << "Введите угол а радианах (число от 0 до 6.28)" << endl;
+  cout << "Введите угол а радианах " << endl;
   cin >> a;
-  while (a < 0 || a > 6.28) {
-   cout << "Недопустимое значение!" << endl;
-   cout << "Введите угол а радианах (число от 0 до 6.28)" << endl;
-   cin >> a;
-  }
   D = a * 180 / 3.14;
   cout << "Угол а в градусах равен " << D << endl;
   return 0;
