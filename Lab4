@@ -27,3 +27,17 @@ int main() {
   cout << "Угол а в градусах равен " << D << endl;
   return 0;
 }
+
+//lab 4, task 3
+#include <iostream>
+using namespace std;
+int main() {
+ float X;
+ cout << "Введите к-во кг конфет" << endl;
+ cin >> X;
+ float A;
+ cout << "Введите стоимость " << X << " кг конфет" << endl;
+ cin >> A;
+ float kg;
+ ...
+}
