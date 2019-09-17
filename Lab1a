@@ -64,3 +64,33 @@ int main() {
   } 
   return 0;
 }
+
+//lab 1, task 4 WORK IN PROGRESS!!!
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+ float x;
+ float x1;
+ float x2;
+ float a;
+ cout << "Введите коэффицент а" << endl;
+ cin >> a;
+ float b;
+ cout << "Введите коэффицент b" << endl;
+ cin >> b;
+ float c;
+ cout << "Введите коэффицент c" << endl;
+ cin >> c;
+ if (a == 0) {
+   x = -(c / b);
+   cout << "х равен " << x << endl;
+ }
+ if (b == 0) {
+  x1 = sqrt(-(c / a));
+  x2 = -sqrt(-(c / a));
+ }
+ if (c == 0) {
+  
+ }
+}
