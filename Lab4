@@ -11,6 +11,15 @@ D = a * 180 / 3.14
 print("Угол а в градусах равен",D)
 
 #lab 4, task 3
+X = float(input("Введите к-во кг конфет "))
+A = float(input("Введите стоимость Х кг конфет "))
+Y = float(input("Введите другое к-во кг конфет "))
+kg = 0
+kg = A / X
+StoimY = kg * Y
+print("Стоимость 1ого кг конфет равна",kg)
+print("Стоимость",Y,"кг конфет равна",StoimY)
+
 #lab 4, task 4
 #lab 4, task 5
 #lab 4, task 6
