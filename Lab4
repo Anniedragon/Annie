@@ -4,7 +4,12 @@ R = 0
 R = a * (3.14 / 180)
 print("Угол а в радианах равен",R)
 
-#lab 4, task 2 
+#lab 4, task 2
+a = float(input("Введите угол а в радианах "))
+D = 0
+D = a * 180 / 3.14
+print("Угол а в градусах равен",D)
+
 #lab 4, task 3
 #lab 4, task 4
 #lab 4, task 5
