@@ -70,16 +70,11 @@ int main() {
 #include <cmath>
 using namespace std;
 int main() {
- float x;
- float x1;
- float x2;
- float a;
+ float x, x1, x2, D, a, b, c;
  cout << "Введите коэффицент а" << endl;
  cin >> a;
- float b;
  cout << "Введите коэффицент b" << endl;
  cin >> b;
- float c;
  cout << "Введите коэффицент c" << endl;
  cin >> c;
  if (a == 0) {
@@ -89,26 +84,27 @@ int main() {
  if (b == 0) {
   x1 = sqrt(-(c / a));
   x2 = -sqrt(-(c / a));
+  cout << "Корни уравнения" << x1 << ", " << x2 << endl;
  }
  if (c == 0) {
   x1 = 0;
   x2 = - (b / a);
   cout << "Корни уравнения" << x1 << ", " << x2 << endl;
  }
- if (a != 0) && (b != 0) && (c != 0) {
+ if ((a != 0) && (b != 0) && (c != 0)) {
   D = b**2 - 4*a*c;
   x1 = (-b + sqrt(D)) / 2;
   x2 = (-b - sqrt(D)) / 2;
   cout << "Корни уравнения" << x1 << ", " << x2 << endl;
   }
- if ((a == 0) && (c == 0)) || ((b == 0) && (c == 0)) {
+ if (((a == 0) && (c == 0)) || ((b == 0) && (c == 0))) {
    x = 0;
    cout << "х равен " << x << endl;
  }
- if (a == 0) && (b == 0) {
+ if ((a == 0) && (b == 0)) {
   cout << "Решений нет" << endl;
  }
- if (a == 0) && (b == 0) && (c == 0) {
+ if ((a == 0) && (b == 0) && (c == 0)) {
    cout << "Бесконечно много решений" << endl;
  }
  return 0;
