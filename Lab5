@@ -26,4 +26,16 @@ k = int(A / B)
 ost = A - k * B
 print("Остаток отрезка А равен", ost)
 
+#lab 5, task 4
+A = int(input("Введите двузначное число "))
+while True :
+  if A < 10 or A > 99 :
+    print("Это не двузначное число")
+    A = int(input("Введите двузначное число "))
+  else :
+    break
+ed = A % 10
+des = A // 10
+print("Новое число:", ed * 10 + des)
+
 
