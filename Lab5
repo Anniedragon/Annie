@@ -38,4 +38,18 @@ ed = A % 10
 des = A // 10
 print("Новое число:", ed * 10 + des)
 
-
+#lab 5, task 5
+A = int(input("Введите трехзначное число "))
+while True :
+  if A < 100 or A > 999 :
+    print("Это не трехзначное число")
+    A = int(input("Введите трехзначное число "))
+  else :
+    break
+S = str(A)
+temp = S[0]
+s1 = S[0]
+s2 = S[1]
+s3 = S[2]
+S = s3 + s2 + s1
+print("Новое число:",S)
