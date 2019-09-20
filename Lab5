@@ -13,3 +13,17 @@ while True :
     break
 k = round(A / B)
 print("Целое количество отрезков В в А равно", k)
+
+#lab 5, task 3
+A = float(input("Введите отрезок А "))
+B = float(input("Введите отрезок В, который меньше А "))
+while True :
+  if A < B or A == B :
+    B = float(input("Введите отрезок В, который меньше А "))
+  else :
+    break
+k = int(A / B)
+ost = A - k * B
+print("Остаток отрезка А равен", ost)
+
+
