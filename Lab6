@@ -46,3 +46,19 @@ if Sk > Sp :
   print("Квадрат больше прямоугольника")
 else :
   print("Количество квадратов в прямоугольнике равно",R)
+
+#lab 6, task 5
+Year = int(input("Введите номер года(целое положительное число) "))
+N = 100
+while True :
+  if Year <= 0 :
+    Year = int(input("Введите номер года(целое положительное число) "))
+  else :
+    break
+St = int(Year / N)
+St1 = Year / 100
+St2 = Year // 100
+if St1 == St2 :
+  print(St,"столетие")
+else :
+  print(St + 1,"столетие")
