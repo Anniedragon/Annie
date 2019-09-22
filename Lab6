@@ -1,0 +1,6 @@
+#lab 6, task 1
+C = float(input("Введите количество секунд "))
+Min = int(C / 60)
+print(Min)
+Ost = C - Min * 60
+print("С начала последней минуты прошло",Ost,"секунд")
