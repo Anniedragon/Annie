@@ -4,3 +4,16 @@ Min = int(C / 60)
 print(Min)
 Ost = C - Min * 60
 print("С начала последней минуты прошло",Ost,"секунд")
+
+#lab 6, task 2
+K = int(input("Введите номер дня года(число от 1 до 365) "))
+N = 7
+while True :
+  if K < 1 or K > 365 :
+    print("Такого дня не существует!")
+    K = int(input("Введите номер дня года(число от 1 до 365) "))
+  else :
+    break
+R = int(K / N)
+Ost = K - R * 7
+print("Номер дня недели равен",Ost)
