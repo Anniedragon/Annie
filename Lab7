@@ -5,3 +5,10 @@ C1 = bool(A > 2)
 C2 = bool(B <= 3)
 print("Неравенство (A > 2):",C1)
 print("Неравенство (B <= 3):",C2)
+
+#lab 7, task 2
+A = float(input("Введите число A "))
+B = float(input("Введите число B "))
+C = float(input("Введите число С "))
+Ist = bool(A < B < C)
+print("Двойное неравенство A < B < C:",Ist)
