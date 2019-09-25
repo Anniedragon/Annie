@@ -145,3 +145,32 @@ int main() {
   }
  return 0;
 }
+
+//задание 3.
+#include <iostream>
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    int a, temp;
+        cout<<"Введите ваш возраст ";
+            cin >> a;
+    temp = a-(a/10)*10;
+        cout << endl << endl;
+    if(a<0||a>100){
+        cout << "Введите корректный возрат";
+    }
+    else{
+        if((a == 12)|| (a == 13) || (a == 14) || (temp==5) || (temp == 6) || (temp == 7) || (temp == 8) || (temp == 9) ||(temp == 10)){
+            cout << "Вам " << a << " лет";
+        }
+        else {
+            if((temp==2)||(temp==3)||(temp==4)){
+                cout <<"Вам " << a << " года";
+            }
+            else cout << "Вам " << a << " год";
+        }
+        
+    }
+    return 0;
+}
