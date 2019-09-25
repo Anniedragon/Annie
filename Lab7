@@ -12,3 +12,10 @@ B = float(input("Введите число B "))
 C = float(input("Введите число С "))
 Ist = bool(A < B < C)
 print("Двойное неравенство A < B < C:",Ist)
+
+#lab 7, task 3
+A = float(input("Введите число A "))
+if (9 < A < 100) and (A % 2 == 0) :
+  print("Число А является чётным двузначным: True")
+else :
+  print("Число А является чётным двузначным: False")
