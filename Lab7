@@ -45,3 +45,10 @@ b = float(input("Введите число "))
 c = float(input("Введите число "))
 Ist = bool(a**2 + b**2 == c**2)
 print("Треугольник со сторонами a, b, c прямоугольный:",Ist)
+
+#lab 7, task 7
+a = float(input("Введите число "))
+b = float(input("Введите число "))
+c = float(input("Введите число "))
+Ist = bool(a + b >= c)
+print("Треугольник со сторонами a, b, с существует:",Ist)
