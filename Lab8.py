@@ -22,3 +22,12 @@ elif (C < B < A) or (C < A < B) :
   print(A + B)
 elif (B < A < C) or (B < C < A) :
   print(A + C)
+
+#lab 8, task 3
+A = int(input("Введите число A "))
+B = int(input("Введите число B "))
+C = int(input("Введите число С "))
+if abs(A - B) < abs(A - C) :
+  print("Точка В расположена ближе. Расстояние до точки А:",abs(A-B))
+else :
+  print("Точка C расположена ближе. Расстояние до точки А:",abs(A-C))
