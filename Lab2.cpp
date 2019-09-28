@@ -32,6 +32,25 @@ int main() {
  return 0;
 }
 
+//lab 2, task 1.3 STILL IN WORK
+#include <iostream>
+using namespace std;
+#include <math.h>
+int main() {
+  float N;
+  float i;
+  float A;
+  cout << "Введите N " << endl;
+  cin >> N;
+  A = 1;
+  for (i=1; i<=N; i++) {
+   A = 1 + (1 / (i * i));
+   cout << A << endl;
+  }
+  cout << A << endl;
+  return 0;
+}
+
 //lab 2, task 1.4
 #include <iostream>
 using namespace std;
