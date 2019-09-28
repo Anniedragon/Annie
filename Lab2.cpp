@@ -70,3 +70,22 @@ int main() {
   cout << A << endl;
   return 0;
 }
+
+//lab 2, task 2
+#include <iostream>
+using namespace std;
+int main() {
+  float b, i, sum, SrAr; 
+  cout << "Введите число, которое больше или равно 100" << endl;
+  cin >> b;
+  while (b < 100) {
+    cout << "Введите число, которое больше или равно 100" << endl;
+    cin >> b;
+  }
+  for (i=100; i<=b; i++) {
+    sum += i*i;
+  }
+   SrAr = sum / (b - 100 + 1);
+   cout << SrAr << endl;
+  return 0;
+}
