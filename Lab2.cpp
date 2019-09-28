@@ -89,3 +89,23 @@ int main() {
    cout << SrAr << endl;
   return 0;
 }
+
+//lab 2, task 3
+#include <iostream>
+using namespace std;
+int main() {
+  int i, j, N, x;
+  x = 1;
+  cout << "Введите число" << endl;
+  cin >> N;
+  for (i=1; i<=N; i++) {
+    for (j=1; j<=N; j++) {
+      x = j * i;
+      if (j == N) {
+        cout << x << endl;
+      } 
+       else cout << x << "   ";  
+    }
+  }
+  return 0;
+}
