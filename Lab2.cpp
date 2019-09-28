@@ -15,7 +15,7 @@ int main() {
  return 0;
 }
 
-//lab 2, task 2
+//lab 2, task 1.1
 #include <iostream>
 using namespace std;
 int main() {
