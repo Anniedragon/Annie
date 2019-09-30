@@ -25,3 +25,11 @@ sum = 0
 for i in range(N+1) :
   sum = sum + A**i
 print(sum)
+
+#lab 10, task 5
+N = int(input("Введите число "))
+A = int(input("Введите число "))
+sum = 0
+for i in range(N+1) :
+  sum = sum + (-1) * A**i
+print(sum)
