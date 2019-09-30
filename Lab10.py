@@ -17,3 +17,11 @@ N1 = 0
 for i in range(1, N+1) :
   N1 = N1 + (2*i - 1)
 print("Квадрат числа N равен:",N1)
+
+#lab 10, task 4
+N = int(input("Введите число "))
+A = int(input("Введите число "))
+sum = 0
+for i in range(N+1) :
+  sum = sum + A**i
+print(sum)
