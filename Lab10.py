@@ -10,3 +10,10 @@ pr = 1
 for i in range(1, N+1) :
  pr = pr * (1 + (i/10))
 print(pr)
+
+#lab 10, task 3
+N = int(input("Введите число N "))
+N1 = 0
+for i in range(1, N+1) :
+  N1 = N1 + (2*i - 1)
+print("Квадрат числа N равен:",N1)
