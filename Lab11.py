@@ -6,4 +6,7 @@ while (A > B) or (A == B) :
   B = int(input("Введите число В, большее, чем А "))
 for i in range(A, B+1) :
   for j in range(1, i+1) :
-    print(i)
+    if j == i:
+     print(i)
+    else :
+     print(i, end = " ")
