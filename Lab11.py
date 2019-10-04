@@ -10,3 +10,18 @@ for i in range(A, B+1) :
      print(i)
     else :
      print(i, end = " ")
+
+#lab 11, task 2
+A = int(input("Введите число А "))
+B = int(input("Введите число, большее А "))
+k = 0
+while (A > B) or (A == B) :
+  print("Условие не выполнено ")
+  B = int(input("Введите число, большее А "))
+for i in range(1,B+1,A) :
+  k += 1
+if B == k * A :
+  Ost = B - k * A
+else :
+  Ost = B - (k - 1) * A
+print(Ost)
