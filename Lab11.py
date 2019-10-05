@@ -50,3 +50,13 @@ while S <= S1 :
   K += 1
 print("Итоговый размер вклада:",S)
 print("Количество месяцев:",K)
+
+#lab 11, task 5
+A = int(input("Введите число "))
+B = int(input("Введите число "))
+while A != B :
+  if A > B :
+    A = A - B
+  else :
+    B = B - A
+print(A)
