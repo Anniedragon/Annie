@@ -60,3 +60,19 @@ while A != B :
   else :
     B = B - A
 print(A)
+
+#lab 11, task 6
+N = int(input("Введите число, большее 1 и меньшее 100 "))
+y = 0
+x = 1
+temp = 0
+while N > 100 :
+  print("Число должно быть меньше 100!")
+  N = int(input("Введите число, большее 1 и меньшее 100 "))
+for k in range(1, 11):
+  if N != y :
+    temp = y
+    y = y + x
+    x = temp
+  else :
+    print(k,"- порядковый номер числа Фибоначчи",N)
