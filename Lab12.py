@@ -57,6 +57,27 @@ for i in range(1, 4) :
       break
   Quater(X, Y)
 
+#lab 12, task 5
+def Fact2(N) :
+ f1 = 1
+ f2 = 1
+ if N % 2 != 0 :
+   for i in range(1, N+1, 2) :
+     f1 *= i
+   print(f1)
+ else :
+   for i in range(2, N+1, 2) :
+     f2 *= i
+   print(f2)
+Ch = float(input("Введите число, не равное 0 "))
+while Ch == 0 :
+  print("число не должно равняться 0!")
+  Ch = float(input("Введите число, не равное 0 "))
+Ch = int(Ch)
+Fact2(Ch)   
+     
+   
+
 
 
  
