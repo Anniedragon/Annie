@@ -33,7 +33,29 @@ for i in range(1, 4) :
   #Rad2 = float(input("Введите 2ой радиус ")
  RingS(Rad1, Rad2) 
  
-
+#lab 12, task 4
+def Quater(x, y) :
+  if (x > 0) and (y > 0) :
+    print("Точка расположена в 1ой координатной четверти")
+  elif (x < 0) and (y > 0) :
+    print("Точка расположена в 2ой координатной четверти")
+  elif (x < 0) and (y < 0) :
+    print("Точка расположена в 3ьей координатной четверти")
+  else :
+    print("Точка расположена в 4ой координатной четверти")
+for i in range(1, 4) :
+  X = float(input("Введите координату Х "))
+  Y = float(input("Введите координату Y "))
+  while True :
+    if X == 0 :
+      print("Координата Х не должна быть равна 0")
+      X = float(input("Введите координату Х "))
+    elif Y == 0 :
+      print("Координата Y не должна быть равна 0")
+      Y = float(input("Введите координату Y "))
+    else :
+      break
+  Quater(X, Y)
 
 
 
