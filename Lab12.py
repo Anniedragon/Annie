@@ -11,3 +11,21 @@ for i in range(1, 6) :
   Res = PowerA3(Ch, St)
   print(Res)
 
+#lab 12, task 2
+def Sign(X) :
+  if X > 0:
+    print("1")
+  elif X == 0 :
+    print("0")
+  else :
+    print("-1")
+X = float(input("Введите число "))
+Sign(X)
+
+
+
+
+ 
+
+
+
