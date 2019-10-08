@@ -65,29 +65,31 @@ int main() {
   return 0;
 }
 
-//lab 1, task 3
+//задание 3.
 #include <iostream>
 using namespace std;
 int main() {
- int age;
- cout << "Введите ваш возраст" << endl;
- cin >> age;
- while ((age <= 0) || (age > 101)) {
-   cout << "Возраст некорректен" << endl;
-   cout << "Введите ваш возраст" << endl;
-   cin >> age;
+ int a, temp;
+  cout<<"Введите ваш возраст "<<endl;
+    cin >> a;
+  temp = a-(a/10)*10;
+  cout << endl << endl;
+  if(a<0||a>100){
+    cout << "Введите корректный возрат";
+    }
+    else {
+      if((a == 12)|| (a == 13) || (a == 14) || (temp==5) || (temp == 6) || (temp == 7) || (temp == 8) || (temp == 9) ||(temp == 10)){
+       cout << "Вам " << a << " лет";
+        }
+      else {
+       if((temp==2)||(temp==3)||(temp==4)){
+        cout <<"Вам " << a << " года";
+         }
+      else cout << "Вам " << a << " год";
+        }  
+      }
+   return 0;
  }
- if ((age == 1 )||(age % 10 == 1)) {
-   cout << "Вам " << age << " год" << endl;
- }
- if (((age==2)||(age==3)||(age==4)||(age % 10==2)||(age % 10==3)||(age % 10==4))&&(!((age==12)||(age==13)||(age==14)))) {
-   cout << "Вам " << age << " года" << endl; 
- }
- if (!((age == 1 )||(age % 10 == 1)||(age==2)||(age==3)||(age==4)||(age % 10==2)||(age % 10==3)||(age % 10==4)||(age==12)||(age==13)||(age==14))) {
-   cout << "Вам " << age << " лет" << endl;
- } 
- return 0;
-}
 
 //lab 1, task 4
 #include <iostream>
@@ -110,8 +112,8 @@ int main() {
       cout << "Решений нет." << endl;
     }
     else {
-      x1 = sqrt(c / a);
-      x2 = -sqrt(c / a);
+      x1 = sqrt(-(c / a));
+      x2 = -sqrt(-(c / a));
       cout << "x1 = " << x1 << ", " << "x2 = " << x2 << endl;
     }
   }
@@ -138,7 +140,7 @@ int main() {
     D = b*b - 4*a*c;
     if (D > 0) {
       x1 = (-b + sqrt(D)) / (2*a);
-      x2 = (-b - sqrt(D) / (2*a));
+      x2 = (-b - sqrt(D)) / (2*a);
       cout << "x1 = " << x1 << ", " << "x2 = " << x2 << endl;
     }
     if (D == 0) {
@@ -156,31 +158,4 @@ int main() {
 
 
 
-//задание 3.
-#include <iostream>
-using namespace std;
-int main()
-{
-    setlocale(LC_ALL, "Russian");
-    int a, temp;
-        cout<<"Введите ваш возраст ";
-            cin >> a;
-    temp = a-(a/10)*10;
-        cout << endl << endl;
-    if(a<0||a>100){
-        cout << "Введите корректный возрат";
-    }
-    else{
-        if((a == 12)|| (a == 13) || (a == 14) || (temp==5) || (temp == 6) || (temp == 7) || (temp == 8) || (temp == 9) ||(temp == 10)){
-            cout << "Вам " << a << " лет";
-        }
-        else {
-            if((temp==2)||(temp==3)||(temp==4)){
-                cout <<"Вам " << a << " года";
-            }
-            else cout << "Вам " << a << " год";
-        }
-        
-    }
-    return 0;
-}
+
