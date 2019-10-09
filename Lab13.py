@@ -46,3 +46,15 @@ for i in range(N) :
   k += 1
   if k == 3 :
     break
+
+#lab 13, task 5
+A = []
+N = int(input("Введите к-во элементов массива "))
+for i in range(1, N+1) :
+  A.append(int(input("Введите элемент массива ")))
+for i in range(N) :
+  if i % 2 != 0 :
+    print(i,"-",A[i], end = "; ")
+for i in range(N) :
+  if i % 2 != 0 :
+    print((N-1)-i,"-",A[(N-1)-i], end = ", ")
