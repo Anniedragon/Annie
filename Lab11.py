@@ -69,10 +69,12 @@ temp = 0
 while N > 100 :
   print("Число должно быть меньше 100!")
   N = int(input("Введите число, большее 1 и меньшее 100 "))
-for k in range(1, 11):
+for k in range(1, 13):
   if N != y :
     temp = y
     y = y + x
     x = temp
+    if (y == 89) and (y != N) :
+      print("Это не число Фибоначчи")
   else :
     print(k,"- порядковый номер числа Фибоначчи",N)
