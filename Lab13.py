@@ -30,6 +30,6 @@ while N <= 2 :
   N = int(input("Введите число, большее 0 "))
 M.append(A)
 M.append(B)
-for i in range(N-2) :
+for i in range(1, N-1) :
  M.append(M[i] + M[i-1])
 print(M)
