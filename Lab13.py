@@ -20,7 +20,7 @@ for i in range(N) :
   M.append(A * D**i)
 print(M)
 
-#lab 13, task 3 In progress
+#lab 13, task 3
 N = int(input("Введите число, большее 2 "))
 M = []
 A = int(input("Введите 1ый элемент списка "))
@@ -33,3 +33,16 @@ M.append(B)
 for i in range(1, N-1) :
  M.append(M[i] + M[i-1])
 print(M)
+
+#lab 13, task 4
+N = int(input("Введите к-во элементов списка "))
+A = []
+k = 0
+for i in range(1, N+1) :
+  A.append(int(input("Введите элемент списка ")))
+for i in range(N) :
+  print(A[i], end = " ")
+  print(A[(N-1)-i], end = " ")
+  k += 1
+  if k == 3 :
+    break
