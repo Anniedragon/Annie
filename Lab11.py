@@ -54,6 +54,8 @@ print("Количество месяцев:",K)
 #lab 11, task 5
 A = int(input("Введите число "))
 B = int(input("Введите число "))
+if (A == 0) or (B == 0) :
+  print(0) 
 while A != B :
   if A > B :
     A = A - B
