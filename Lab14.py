@@ -47,3 +47,14 @@ for i in range(N) :
     if A[i] < min :
       min = A[i]
 print(min)
+
+#lab 14, task 4
+A = []
+max = 0
+N = int(input("Введите к-во элементов массива "))
+for i in range(N) :
+  A.append(int(input("Введите элемент списка ")))
+for i in range(N-1) :
+  if (A[i] > A[i-1]) and (A[i] > A[i+1]) :
+    max = A[i]
+print(max)
