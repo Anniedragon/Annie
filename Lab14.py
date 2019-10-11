@@ -58,3 +58,28 @@ for i in range(N-1) :
   if (A[i] > A[i-1]) and (A[i] > A[i+1]) :
     max = A[i]
 print(max)
+
+#lab 14, task 5
+A = []
+k = 0
+N = int(input("Введите к-во элементов списка "))
+for i in range(N) :
+  A.append(int(input("Введите элемент списка (должно быть строго 2 одинаковых элемента) ")))
+while True :
+  for i in A :
+    for j in A :
+      if i == j :
+        k += 1
+  if k != N+2 :
+    k = 0
+    print("Условие не выполнено!")
+    A.clear()
+    for i in range(N) :
+      A.append(int(input("Введите элемент списка (должно быть строго 2 одинаковых элемента) ")))
+  else :
+    break
+for i in range(N) :
+  for j in range(N) :
+    if (A[i] == A[j]) and (i != j) :
+      print(i, j)
+      break
