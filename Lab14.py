@@ -36,3 +36,14 @@ while True :
       flag = 1
 print(flag)
 
+#lab 14, task 3
+A = []
+N = int(input("Введите к-во элементов массива "))
+for i in range(N) :
+  A.append(int(input("Введите элемент списка ")))
+min = A[0]
+for i in range(N) :
+  if i % 2 == 0 :
+    if A[i] < min :
+      min = A[i]
+print(min)
