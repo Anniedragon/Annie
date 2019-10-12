@@ -31,9 +31,9 @@ while True :
       A.append(int(input("Введите элемент списка (одинаковых чисел быть не должно) ")))  
   else :
     break 
-  for i in range(N-1) :
-    if (A[i+1] - A[i]) == (A[i+2] - A[i+1]) :
-      flag = 1
+for i in range(N-2) :
+  if (A[i+1] - A[i]) == (A[i+2] - A[i+1]) :
+    flag = 1
 print(flag)
 
 #lab 14, task 3
