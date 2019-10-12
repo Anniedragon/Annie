@@ -40,3 +40,28 @@ for i in range(N) :
   if A[i] % 2 != 0 :
     A[i] += k
 print(A)
+
+#lab 15, task 4
+A = []
+n1 = 0
+n2 = 0
+N = int(input("Введите к-во элементов списка "))
+for i in range(N) :
+  A.append(int(input("Введите элемент списка А ")))
+Min = A[0]
+Max = 0
+for i in range(N) :
+  if A[i] < Min :
+    Min = A[i]
+    n1 = i
+  elif A[i] > Max :
+    Max = A[i]
+    n2 = i
+for i in range(N) :
+  if n1 < n2 :
+    if (i > n1) and (i < n2) :
+      A[i] = 0
+  else :
+    if (i > n2) and (i < n1) :
+      A[i] = 0
+print(A)
