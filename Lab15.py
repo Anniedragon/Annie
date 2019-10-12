@@ -26,3 +26,17 @@ for i in range(N) :
     sum += k
   B[i] = sum / (k)
 print(B)
+
+#lab 15, task 3
+A = []
+k = 0
+N = int(input("Введите к-во элементов списка "))
+for i in range(N) :
+  A.append(int(input("Введите элемент списка А ")))
+for i in A :
+  if i % 2 != 0 :
+    k = i
+for i in range(N) :
+  if A[i] % 2 != 0 :
+    A[i] += k
+print(A)
