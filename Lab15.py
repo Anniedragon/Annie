@@ -13,18 +13,18 @@ for i in range(N) :
 print(A)
 print(B)
 
-#lab 15, task 2 In progress
+#lab 15, task 2
 A = []
 B = []
-sum = 0
+Sum = 0
 k = 1
 N = int(input("Введите к-во элементов списка "))
 for i in range(N) :
   A.append(int(input("Введите элемент списка А ")))
 for i in range(N) :
   for k in range(1, i+1) :
-    sum += k
-  B[i] = sum / (k)
+    Sum += A[k]
+  B.append(Sum / (k))
 print(B)
 
 #lab 15, task 3
