@@ -3,7 +3,6 @@
 using namespace std;
 int main() {
   int N = 0;
-  int flag = 1;
   int count = 0;
   int sum = 0;
   int pr = 1;
