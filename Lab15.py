@@ -65,3 +65,31 @@ for i in range(N) :
     if (i > n2) and (i < n1) :
       A[i] = 0
 print(A)
+
+#lab 15, task 5
+A = []
+k = 0
+temp = 0
+N = int(input("Введите к-во элементов списка "))
+print("Все элементы списка, кроме 1ого должны быть упорядочены по возрастанию")
+for i in range(N) :
+  A.append(int(input("Введите элемент списка А ")))
+while True :
+  for i in range(N-1) :
+    if A[i] < A[i+1] :
+      k += 1
+  if k != N-2 :
+    k = 0
+    A.clear()
+    print("Условие не выполнено!")
+    print("Все элементы списка, кроме 1ого должны быть упорядочены по возрастанию")
+    for i in range(N) :
+      A.append(int(input("Введите элемент списка А ")))
+  else :
+    break
+for i in range(N-1) :
+  if A[i] > A[i+1] :
+    temp = A[i+1]
+    A[i+1] = A[i]
+    A[i] = temp
+print(A)
