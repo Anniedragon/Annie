@@ -5,6 +5,7 @@ temp = 0
 N = int(input("Введите к-во элементов списка "))
 for i in range(N) :
   A.append(int(input("Введите элемент списка А ")))
+for i in range(N) :
   B.append(int(input("Введите элемент списка В ")))
 for i in range(N) :
   temp = A[i]
