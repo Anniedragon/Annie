@@ -59,3 +59,33 @@ int main(){
   cout << "Min element is " << min << endl;
   cout << "Max element is " << max << endl;
 }
+
+//lab 3, task 4(8)
+#include <iostream>
+using namespace std;
+int main(){
+  int x = 0;
+  int f = 0;
+  int min;
+  cout << "Input number of elements ";
+  cin >> x;
+  int temp[x];
+  for(int k = 1; k<=x; k++){
+    cout << "Input " << k << " element ";
+    cin >> temp[k];
+  }
+  for (int i=0; i<x; i++){
+    if(i == 0){
+      min = temp[i];
+    }
+    if(temp[i]<min){
+      min = temp[i];
+      f = i;
+    }
+  } 
+  temp[f] = 0 - temp[f];
+  for(int k = 1; k<=x; k++){
+    cout << temp[k] << " ";
+  }
+   return 0;
+}
