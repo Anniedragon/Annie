@@ -9,7 +9,7 @@ for i in range(N-1) :
   if A[i] == A[i+1] :
     k += 1
     flag = 0
-for i in range(N-(k+1)) :
+for i in range(N-k) :
   if A[i] == A[i+1] :
     A.remove(A[i+1])
 if flag == 1 :
