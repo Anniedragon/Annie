@@ -60,6 +60,31 @@ int main(){
   cout << "Max element is " << max << endl;
 }
 
+//lab 3, task 3
+#include <iostream>
+using namespace std;
+int main(){
+ int x, b, N;
+ x = 0;
+ cout << "Cin number of elements ";
+ cin >> N;
+ int temp[N];
+ int t[N];
+ cout << "Cin b ";
+ cin >> b;
+ for(int i = 0; i<N; i++){
+   cout << "Cin " << i+1 << " element ";
+   cin >> t[i];
+   temp[i] = 0;
+ }
+ for (int j = 0; j<N; j++){
+   if(t[j]>=b){
+     cout << t[j] << " ";
+   }
+ }
+return 0;
+}
+
 //lab 3, task 4(8)
 #include <iostream>
 using namespace std;
