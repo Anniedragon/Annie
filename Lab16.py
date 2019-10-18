@@ -43,3 +43,30 @@ while True :
         elif k == 0 :
           break
 print(A)
+
+#lab 16, task 3 In progress
+A = []
+MinN = 0
+MaxN = 0
+temp = 0
+N = int(input("Введите к-во элементов "))
+for i in range(N) :
+  A.append(int(input("Введите элемент ")))
+A.append(0) 
+A.append(0)
+Min = A[0]
+Max = A[0]
+for i in range(N) :
+  if A[i] < Min :
+    Min = A[i]
+    MinN = i
+  if A[i] > Max :
+    Max = A[i]
+    MaxN = i
+temp = A[MinN-1]
+A[MinN-1] = A[N]
+A[N] = temp
+temp = A[MaxN+1]
+A[MaxN+1] = A[N-1]
+A[N-1] = temp
+print(A)
