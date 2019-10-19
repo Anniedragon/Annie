@@ -44,6 +44,43 @@ while True :
           break
 print(A)
 
+#lab 2.cpp
+#include <iostream>
+using namespace std;
+int main() {
+  int x, y, k, N;
+  x = 0;
+cout <<"Cin number of elements ";
+cin >> N;
+int temp[N];
+int t[N];
+for(int i = 0; i<N; i++){
+  cout << "Cin " << i+1 << " element ";
+  cin >> temp[i];
+}
+for(int m = 0; m<N; m++){
+  k = 1;
+  for(int z = m+1; z<N; z++){
+  if(temp[m] == temp[z]){
+    k++;
+  }
+  }
+  x = 0;
+  for(int i = 0; i<k; i++){
+      if(temp[m] == temp[i] ){
+      x++;
+    }
+    }
+  if((k != 2)&&(x < 1)){
+    for(int i = 0; i<k; i++){
+      if(temp[m] != temp[i] ){
+      cout << temp[m] << " ";
+    }
+    }
+  }
+}
+}
+
 #lab 16, task 3 In progress
 A = []
 MinN = 0
