@@ -79,3 +79,24 @@ for i in range(N) :
   else :
     A1.append(A[i])
 print(A1)
+
+#lab 16, task 4
+import random
+A = []
+A1 = []
+k = 0
+N = int(input("Введите к-во элементов "))
+for i in range(N) :
+  A.append(random.randint(-100, 100))
+for i in range(N) :
+  if A[i] < 0 :
+    k += 1
+for i in range(k) :
+  A.append(0)
+for i in range(N) :
+  if A[i] < 0 :
+    A1.append(A[i])
+    A1.append(0)
+  else :
+    A1.append(A[i])
+print(A1)
