@@ -17,43 +17,37 @@ if flag == 1 :
 else :
   print(A)
 
-#lab 2.cpp
-#include <iostream>
-using namespace std;
-int main() {
-  int x, y, k, N;
-  x = 0;
-cout <<"Cin number of elements ";
-cin >> N;
-int temp[N];
-int t[N];
-for(int i = 0; i<N; i++){
-  cout << "Cin " << i+1 << " element ";
-  cin >> temp[i];
-}
-for(int m = 0; m<N; m++){
-  k = 1;
-  for(int z = m+1; z<N; z++){
-  if(temp[m] == temp[z]){
-    k++;
-  }
-  }
-  x = 0;
-  for(int i = 0; i<k; i++){
-      if(temp[m] == temp[i] ){
-      x++;
-    }
-    }
-  if((k != 2)&&(x < 1)){
-    for(int i = 0; i<k; i++){
-      if(temp[m] != temp[i] ){
-      cout << temp[m] << " ";
-    }
-    }
-  }
-}
-}
-
+#lab 16, task 2 БЛЯТЬКАКЖЕОНАМЕНЯЗАЕБАЛАВТОРОЙБЛЯТЬСУКАДЕНЬНЕМОГУСДЕЛАТЬ
+A = []
+A1 = []
+x = 0
+k = 0
+flag = 1
+N = int(input("Введите к-во элементов "))
+for i in range(N) :
+  A.append(int(input("Введите элемент ")))
+while True :
+  for i in range(N) :
+    if A[i] == 0 :
+      print(flag)
+      print("Только ненулевые элементы!")
+      A.clear()
+      for i in range(N) :
+        A.append(int(input("Введите элемент ")))
+    else :
+      break
+print(A)
+'''
+for m in range(N-1) :
+  k = 1
+  for z in range(m+1, N) :
+    if A[m] == A[z] :
+      k += 1
+      print("k =",k)
+  for i in range(N) :
+    if (k != 2) and (A[i] != A1[i]) :
+'''
+  
 #lab 16, task 3
 A = []
 A1 = []
