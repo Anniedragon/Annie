@@ -17,33 +17,6 @@ if flag == 1 :
 else :
   print(A)
 
-#lab 16, task 2 In progress
-A = []
-k = 0
-N = int(input("Введите к-во элементов списка "))
-for i in range(N) :
-  A.append(int(input("Введите элемент списка ")))
-while True :
-  for i in range(N-3) :
-    for j in range(N-3) :
-      if (N <= 2) :
-        break
-      if (A[i] == A[j]) and (i != j) :
-        print(N)
-        k += 1
-        ni = i
-        nj = j
-        print(A)
-        if k == 2 :
-          k = 0
-          A.remove(A[ni])
-          A.remove(A[nj])
-          N = N - 2
-          print(A)
-        elif k == 0 :
-          break
-print(A)
-
 #lab 2.cpp
 #include <iostream>
 using namespace std;
@@ -81,29 +54,28 @@ for(int m = 0; m<N; m++){
 }
 }
 
-#lab 16, task 3 In progress
+#lab 16, task 3
 A = []
-MinN = 0
-MaxN = 0
-temp = 0
+A1 = []
 N = int(input("Введите к-во элементов "))
 for i in range(N) :
   A.append(int(input("Введите элемент ")))
-A.append(0) 
+A.append(0)
 A.append(0)
 Min = A[0]
 Max = A[0]
 for i in range(N) :
   if A[i] < Min :
     Min = A[i]
-    MinN = i
   if A[i] > Max :
     Max = A[i]
-    MaxN = i
-temp = A[MinN-1]
-A[MinN-1] = A[N]
-A[N] = temp
-temp = A[MaxN+1]
-A[MaxN+1] = A[N-1]
-A[N-1] = temp
-print(A)
+for i in range(N) :
+  if A[i] == Min :
+    A1.append(0)
+    A1.append(A[i])
+  elif A[i] == Max :
+    A1.append(A[i])
+    A1.append(0)
+  else :
+    A1.append(A[i])
+print(A1)
