@@ -107,3 +107,41 @@ int main() {
     cout << slo << " " << ymno << endl;
   }
 }
+
+//lab4(5), task 4
+#include <iostream>
+using namespace std;
+int main() {
+  int N, M, slo, k;
+ 
+  cout << "Cin razmer matrizyu ";
+  cout << "Cin N ";
+  cin >> N;
+  cout  << "Cin M ";
+  cin >> M;
+  int t[N][M];
+  for(int i = 0; i<N; i++){
+    for(int j = 0; j < M; j++){
+    cin >>t[i][j];
+    }
+  }
+    for(int j = 0; j<M;j++){
+     slo = 0;
+    for(int i = 0; i < N; i++){
+      if (t[i][j] > 0){
+    slo = slo+t[i][j];
+    }
+    }
+    cout << slo << " ";
+  }
+  cout << endl;
+  for(int j = 0; j<M;j++){
+    k = 0;
+    for(int i = 0; i < N; i++){
+      if (t[i][j] > 0){
+   k++;
+    }
+    }
+    cout << k << " ";
+  }
+}
