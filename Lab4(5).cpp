@@ -79,3 +79,31 @@ int main() {
     }
   }
 }
+
+//lab4(5), task 3
+#include <iostream>
+using namespace std;
+int main() {
+  int N, M, ymno, slo;
+ 
+  cout << "Cin razmer matrizyu ";
+  cout << "Cin N ";
+  cin >> N;
+  cout  << "Cin M ";
+  cin >> M;
+  int t[N][M];
+  for(int i = 0; i<N; i++){
+    for(int j = 0; j < M; j++){
+    cin >>t[i][j];
+    }
+  }
+    for(int i = 0; i<N; i++){
+     ymno = 1;
+     slo = 0;
+    for(int j = 0; j < M; j++){
+    slo = slo+t[i][j];
+    ymno = ymno*t[i][j];
+    }
+    cout << slo << " " << ymno << endl;
+  }
+}
