@@ -17,36 +17,23 @@ if flag == 1 :
 else :
   print(A)
 
-#lab 16, task 2 БЛЯТЬКАКЖЕОНАМЕНЯЗАЕБАЛАВТОРОЙБЛЯТЬСУКАДЕНЬНЕМОГУСДЕЛАТЬ
+#lab 16, task 2
 A = []
-A1 = []
-x = 0
-k = 0
 flag = 1
+r = 6
 N = int(input("Введите к-во элементов "))
 for i in range(N) :
   A.append(int(input("Введите элемент ")))
-while True :
+while flag == 1 :
+  flag = 0
   for i in range(N) :
-    if A[i] == 0 :
-      print(flag)
-      print("Только ненулевые элементы!")
-      A.clear()
-      for i in range(N) :
-        A.append(int(input("Введите элемент ")))
-    else :
+    if A.count(A[i]) % 2 == 0 :
+      for j in range(A.count(A[i])) :
+        A.remove(A[i])
+        N -= 1
+      flag = 1
       break
 print(A)
-'''
-for m in range(N-1) :
-  k = 1
-  for z in range(m+1, N) :
-    if A[m] == A[z] :
-      k += 1
-      print("k =",k)
-  for i in range(N) :
-    if (k != 2) and (A[i] != A1[i]) :
-'''
   
 #lab 16, task 3
 A = []
