@@ -61,3 +61,53 @@ for(int i = 0; i<x; i++){
 }
 return 0;
 }
+//lab5(6), task 3
+#include <iostream>
+using namespace std;
+int main(){
+int x, f=0, y, k1=0, k2=0, k=0;
+int min;
+cout << "Cin razmer matriz ";
+cin >> x;
+y = x;
+int temp[x][y];
+int t[x];
+for(int i = 0; i<x; i++){
+  for(int j = 0; j<x; j++){
+  cin >> temp[i][j];
+}
+}
+for(int i = 0; i<x; i++){ 
+  t[k] = temp[k1][k2]; 
+  k++;
+  k1++;
+  k2++;
+}
+for(int i = 0; i<x; i++ ){
+  for(int j = 1; j<x; j++){
+    if(t[j]<t[j-1]){
+      f = t[j-1];
+      t[j-1] = t[j];
+      t[j] = f;
+    }
+  }
+}
+k = 0;
+k1 = 0;
+k2 = 0;
+for(int i = 0; i<x; i++){ 
+  temp[k1][k2] = t[k]; 
+  k++;
+  k1++;
+  k2++;
+}
+for(int i = 0; i<x; i++){
+  for(int j = 0; j<x; j++){
+    if(j!=(x-1)){
+      cout << temp[i][j] << " ";
+    }
+    else cout << temp[i][j] << endl;
+  }
+}
+return 0;
+}
