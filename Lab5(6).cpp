@@ -35,3 +35,29 @@ for(int i = 0; i<x; i++){
 }
 return 0;
 }
+//lab5(6), task 2
+#include <iostream>
+using namespace std;
+int main(){
+int x, f=0;
+int min;
+cout << "Cin razmer massiva ";
+cin >> x;
+int temp[x];
+for(int i = 0; i<x; i++){
+  cin >> temp[i];
+}
+for(int i = 0; i<x; i++ ){
+  for(int j = 1; j<x; j++){
+    if(temp[j]<temp[j-1]){
+      f = temp[j-1];
+      temp[j-1] = temp[j];
+      temp[j] = f;
+    }
+  }
+}
+for(int i = 0; i<x; i++){
+  cout << temp[i] << " ";
+}
+return 0;
+}
