@@ -49,7 +49,7 @@ for(int i = 0; i<x; i++){
 }
 for(int i = 0; i<x; i++ ){
   for(int j = 1; j<x; j++){
-    if(temp[j]<temp[j-1]){
+    if(temp[j]>temp[j-1]){
       f = temp[j-1];
       temp[j-1] = temp[j];
       temp[j] = f;
