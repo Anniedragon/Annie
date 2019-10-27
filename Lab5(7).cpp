@@ -1,4 +1,4 @@
-//lab5(7), task 1
+//lab6(7), task 1
 #include <iostream>
 #include <string>
 using namespace std;
@@ -9,7 +9,7 @@ int main() {
   cin >> temp;
   cout << temp.length();
 }
-//lab5(7), task 2
+//lab6(7), task 2
 #include <iostream>
 #include <cctype>
 #include <string>
@@ -22,7 +22,7 @@ int main() {
   transform(temp.begin(), temp.end(), temp.begin(), tolower);
   std::cout << temp; 
 }
-//lab5(7), task 3
+//lab6(7), task 3
 #include <iostream>
 #include <cctype>
 #include <string>
@@ -43,14 +43,14 @@ int main() {
   }
   else std:: cout << "Строки не равны";
 }
-//lab5(7), task 4
+//lab6(7), task 4
 #include <iostream>
 #include <cctype>
 #include <string>
 #include <algorithm>
 int main() {
   setlocale(LC_ALL, "Russian");
-  std::cout << "Введите первую строку ";
+  std::cout << "Введите строку ";
   std::string temp;
   std::string temp2;
   std::cin >> temp;
@@ -67,5 +67,4 @@ int main() {
     std:: cout << "Строка является переветрышем";
   }
   else std:: cout << "Строка не является перевертышем";
-  std:: cout << temp2;
 }
