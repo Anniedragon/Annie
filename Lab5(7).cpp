@@ -23,4 +23,24 @@ int main() {
   std::cout << temp; 
 }
 //lab5(7), task 3
+#include <iostream>
+#include <cctype>
+#include <string>
+#include <algorithm>
+int main() {
+  setlocale(LC_ALL, "Russian");
+  std::cout << "Введите первую строку ";
+  std::string temp;
+  std::cin >> temp;
+  std::cout << "Введите вторую строку ";
+  std::string temp2;
+  std::cin >> temp2;
+  transform(temp.begin(), temp.end(), temp.begin(), tolower);
+  transform(temp2.begin(), temp2.end(), temp2.begin(), tolower);
+  bool result = temp == temp2;
+  if(result == 1){
+  std:: cout << "Строки равны";
+  }
+  else std:: cout << "Строки не равны";
+}
 //lab5(7), task 4
