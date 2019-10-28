@@ -19,3 +19,11 @@ for i in range(len(S)-1) :
       S1 += S[i+1]
 print(S1)
 
+#lab 20, task 3
+S = str(input("Введите строку "))
+k = 0
+for i in range(len(S)) :
+  B = S[i].isupper()
+  if B == True :
+    k += 1
+print("Количество прописных букв в строке S равно",k)
