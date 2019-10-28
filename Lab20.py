@@ -27,3 +27,19 @@ for i in range(len(S)) :
   if B == True :
     k += 1
 print("Количество прописных букв в строке S равно",k)
+
+#lab 20, task 4 In progress
+S = "qwerrttyuyii"
+S.replace("q", "qq")
+print(S)
+'''
+S = str(input("Введите строку "))
+C = str(input("Введите символ "))
+C2 = C*2
+print(C2)
+k = 0
+for i in range(len(S)) :
+  if S[i] == C :
+    S[i].replace(C, C2)
+print(S)
+''' 
