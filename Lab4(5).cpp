@@ -34,50 +34,56 @@ int main() {
   cout << "Minimum = " << min << endl;
 }
 
-//lab 4(5), task 2 In progress
+//lab 4(5), task 2
 #include <iostream>
 using namespace std;
 int main() {
-  int N;
-  int k = 0;
-  int temp = 0;
-  int maxi = 0;
-  int maxj = 0;
-  cout << "Enter N ";
-    cin >> N;
-  int A[N][N];
-  for (int i=1; i<=N; i++) {
-    for (int j=1; j<=N; j++) {
-        cout << "Enter element ";
-        cin >> A[i][j];
-      }
+  cout << "Cin razmer matiz ";
+  int x, y, k, m, max, l, f;
+  cin >> x;
+  y = x;
+  k = 0;
+  m = 0;
+  max = 0;
+  l = 0;
+  f = 0;
+  int temp[x][y];
+  for (int i=0; i<x; i++) {
+    for (int j=0; j<y; j++) {
+      cin >> temp[i][j];
     }
-  int max = A[0][0];
-  for (int i=0; i<=N; i++) {
-    for (int j=0; j<=N; j++) {
-      if (j <= N) {
-        if (A[i][j] > max) {
-          max = A[i][j];
-          maxi = i;
-          maxj = j;
-        }
-        cout << max << endl;
+  }
+  for (int i=0; i<x; i++) {
+    for (int j=0; j<y; j++) {
+      if (j == 0) {
+        max = temp[i][j];
+        f = j;
       }
-      if (i == j) {
-        temp = A[i][j];
-        A[i][j] = A[maxi][maxj];
-        A[maxi][maxj] = temp;
+      if (temp[i][j] > max) {
+        max = temp[i][j];
+        f = j;
+      }
+      if (j == (x - 1)) {
+        l = temp[m][k];
+        temp[m][k] = max;
+        temp[i][f] = l;
+        max = -214783647;
+        k++;
+        m++;
       }
     }
   }
-  for (int i=0; i<=N; i++) {
-    for (int j=0; j<=N; j++) {
-      if (j == N) {
-        cout << A[i][j] << endl;
+  for (int i=0; i<x; i++) {
+    for (int j=0; j<x; j++) {
+      if (j == (y - 1)) {
+        cout << temp[i][j] << endl;
       }
-      else cout << A[i][j] << " ";
+      else {
+        cout << temp[i][j] << " ";
+      }
     }
   }
+  return 0;
 }
 
 //lab4(5), task 3
