@@ -42,3 +42,15 @@ for i in range(len(S)) :
   else :
     S1 += S[i]
 print(S1)
+
+#lab 20, task 5
+S = str(input("Введите строку "))
+N = len(S)
+St = S
+S0 = str(input("Введите подстроку "))
+k = 0
+for i in range(len(S)) :
+  if S.find(S0) != -1 :
+    S = S.replace(S[i], " ")
+    k += 1
+print("Количество вхождений подстроки",S0,"в строку",St,"равно",k)
