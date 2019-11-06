@@ -66,6 +66,33 @@ for i in range(len(S)) :
     n2 = i
 print(S[n1+1:n2])
 
+#lab 21, task 6
+S = str(input("Введите строку вида C:/python/prog123.py\n "))
+k = 0
+k1 = 0
+for i in range(len(S)) :
+  if S[i] == "/" :
+    k += 1
+for i in range(len(S)) :
+  if S[i] == "/" :
+    k1 += 1
+  if k1 == k :
+    n1 = i
+    break
+S = S[:i]
+k = 0
+k1 = 0
+for i in range(len(S)) :
+  if S[i] == "/" :
+    k += 1
+for i in range(len(S)) :
+  if S[i] == "/" :
+    k1 += 1
+  if k1 == k :
+    n1 = i
+    break
+print(S[i+1:])
+
 #lab 21, task 7
 S = str(input("Введите строку на русском языке "))
 S1 = ""
