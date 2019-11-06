@@ -37,3 +37,13 @@ for i in range(len(S)) :
   else :
     S1 += S[i] 
 print(S1)
+
+#lab 21, task 4
+S = str(input("Введите строку на русском языке "))
+Sgl = "уеыаоэяию"
+k = 0
+for i in S :
+  for j in Sgl:
+    if i == j :
+      k += 1
+print("Количество гласных в строке равно",k)
