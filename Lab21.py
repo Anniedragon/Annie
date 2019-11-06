@@ -50,10 +50,8 @@ print("Количество гласных в строке равно",k)
 
 #lab 21, task 5
 S = str(input("Введите строку вида C:/python/prog123.py\n "))
-S1 = ""
 k = 0
 k1 = 0
-k2 = 0
 for i in range(len(S)) :
   if S[i] == "/" :
     k += 1
@@ -61,13 +59,12 @@ for i in range(len(S)-1) :
   if S[i] == "/" :
     k1 += 1
   if k1 == k :
-    S1 += S[i+1]
-for i in range(len(S1)) :
-  if S1[i] != "." :
-    k2 += 1
-  else :
+    n1 = i
     break
-print(S1[:k2])
+for i in range(len(S)) :
+  if S[i] == "." :
+    n2 = i
+print(S[n1+1:n2])
 
 #lab 21, task 7
 S = str(input("Введите строку на русском языке "))
