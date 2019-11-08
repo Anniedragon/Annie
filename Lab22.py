@@ -19,3 +19,14 @@ S = S.rstrip()
 S1 = str(input("Введите другую строку "))
 S = S.replace(" ", S1)
 print(S)
+
+#lab 22, task 4
+S = str(input("Введите строку "))
+S1 = ""
+k = 0
+for i in range(len(S)) :
+  if S[i] != " " :
+    S1 += S[i]
+  elif (S[i] == " ") and (S[i+1] != " ") :
+    S1 += S[i]
+print(S1)
