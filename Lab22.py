@@ -23,7 +23,6 @@ print(S)
 #lab 22, task 4
 S = str(input("Введите строку "))
 S1 = ""
-k = 0
 for i in range(len(S)) :
   if S[i] != " " :
     S1 += S[i]
