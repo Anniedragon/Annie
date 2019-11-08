@@ -12,3 +12,10 @@ K = int(input("Введите к-во * в строке "))
 N = int(input("Введите к-во строк "))
 for i in range(N) :
   print(S * K, end = "\n")
+
+#lab 22, task 3
+S = " " + str(input("Введите строку "))
+S = S.rstrip()
+S1 = str(input("Введите другую строку "))
+S = S.replace(" ", S1)
+print(S)
