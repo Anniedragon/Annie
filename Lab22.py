@@ -29,3 +29,16 @@ for i in range(len(S)) :
   elif (S[i] == " ") and (S[i+1] != " ") :
     S1 += S[i]
 print(S1)
+
+#lab 22, task 5
+S = str(input("Введите строку\n "))
+k = 0
+k1 = 0
+for i in range(len(S)) :
+  if S[i] == " " :
+    k += 1
+  else :
+    if k == 5 :
+      k1 += 1
+    k = 0
+print("Количество абзацев в строке равно",k1)
