@@ -73,3 +73,38 @@ for i in range(len(DlinyS)-1) :
       Extra.append(ElementS[K])
 A1.extend(Extra)
 print(A1)
+
+#lab 17, task 4
+A = []
+Mn = []
+Mx = []
+k = 1
+flag = 0
+flag1 = 0
+N = int(input("Введите к-во точек "))
+for i in range(N) :
+  print("Точка",k)
+  A.append(int(input("Введите координату Х точки ")))
+  A.append(int(input("Введите координату Y точки ")))
+  k += 1
+for i in range(N*2-1) :
+  if (i % 2 == 0) or (i == 0) :
+    flag = 0
+  else :
+    flag = 1
+  if flag == 0 :
+    if (A[i] < 0) and (A[i+1] > 0) :
+      flag1 = 1
+      Mn.append(A[i])
+      Mx.append(A[i+1])
+if flag1 == 0 :
+  print("Точка (0;0)")
+Min = Mn[0]
+Max = Mx[0]
+for i in Mn :
+  if i < Min :
+    Min = i
+for i in Mx :
+  if i > Max :
+    Max = i
+print("Точка (",Min,";",Max,")")
