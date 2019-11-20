@@ -108,3 +108,52 @@ for i in Mx :
   if i > Max :
     Max = i
 print("Точка (",Min,";",Max,")")
+
+#lab 17, task 5
+from random import randint
+from math import sqrt
+A = []
+X = []
+Y = []
+S1 = 0
+S2 = 0
+S3 = 0
+P = 0
+N = int(input("Введите общее к-во координат(чётное) "))
+for i in range(N) :
+  A.append(randint(-10, 10))
+print(A)
+for i in range(N) :
+  if (i % 2 == 0) or (i == 0) :
+    X.append(A[i])
+  else :
+    Y.append(A[i])
+Xmax1 = X[0]
+Xmax2 = X[1]
+Xmax3 = X[2]
+Ymax1 = Y[0]
+Ymax2 = Y[1]
+Ymax3 = Y[2]
+for i in range(len(X)-1) :
+  if X[i] > Xmax1 :
+    Xmax1 = X[i]
+for i in range(len(X)-1) :
+  if (X[i] > Xmax2) and (X[i] != Xmax1) :
+    Xmax2 = X[i]
+for i in range(len(X)-1) :
+  if (X[i] > Xmax3) and (X[i] != Xmax2) and (X[i] != Xmax1) :
+    Xmax3 = X[i]
+for i in range(len(X)-1) :
+  if Y[i] > Ymax1 :
+    Ymax1 = Y[i]
+for i in range(len(X)-1) :
+  if (Y[i] > Ymax2) and (Y[i] != Ymax1) :
+    Ymax2 = Y[i]
+for i in range(len(X)-1) :
+  if (Y[i] > Ymax3) and (Y[i] != Ymax2) and (Y[i] != Ymax1) :
+    Ymax3 = Y[i]
+S1 = sqrt((Xmax2-Xmax1)**2 + (Ymax2-Ymax1)**2)
+S2 = sqrt((Xmax3-Xmax2)**2 + (Ymax3-Ymax2)**2)
+S3 = sqrt((Xmax3-Xmax1)**2 + (Ymax3-Ymax1)**2)
+P = S1 + S2 + S3
+print("Периметр треугольника равен",P) 
