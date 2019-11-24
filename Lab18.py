@@ -24,3 +24,19 @@ for i in range(N) :
     if (i != 0) and (i != N-1) and (j == 1) :
       print(A[i][j])
       . . .
+      
+#lab 18, task 2
+N = int(input("Введите к-во строк в массиве "))
+A = []
+Sum = 0
+Proisv = 1
+for i in range(N) :
+  A.append([int(j) for j in input().split()])
+K = int(input("Введите номер строки массива(отсчёт идёт с 0) "))
+for i in range(N) :
+  for j in range(N) :
+    if i == K :
+      Sum += A[i][j]
+      Proisv *= A[i][j]
+print("Сумма элементов строки К равна",Sum)
+print("Произведение элементов строки К равно",Proisv)
