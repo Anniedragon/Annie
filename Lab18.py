@@ -40,3 +40,31 @@ for i in range(N) :
       Proisv *= A[i][j]
 print("Сумма элементов строки К равна",Sum)
 print("Произведение элементов строки К равно",Proisv)
+
+#lab 18, task 3 IN PROGRESS
+N = int(input("Введите к-во строк в массиве "))
+A = []
+k = 0
+k1 = 0
+MinPr = 1
+Pr = 1
+Num = 0
+for i in range(N) :
+  A.append([int(j) for j in input().split()])
+for i in range(N) :
+  for j in range(N) :
+    if j == 0 :
+      MinPr *= A[i][j]
+while k1 != 2 : 
+  for i in range(N) :
+    for j in range(N) :
+      if j == k :
+        Pr *= A[i][j]
+      k += 1
+      if Pr < MinPr :
+        Minpr = Pr    
+    Pr = 1
+    k = 0
+  k1 += 1
+print(Num, "out")
+print(MinPr, "out")
