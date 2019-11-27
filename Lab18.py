@@ -86,3 +86,25 @@ while k != N :
 print("\n")
 for i in Count :
   print(i, end = " ")
+
+#lab 18, task 5
+N = int(input("Введите к-во строк в массиве "))
+A = []
+k = 0
+k1 = 0
+for i in range(N) :
+  A.append([int(j) for j in input().split()])
+while k != N :
+  for i in range(N) :
+    for j in range(N) :
+      if j == k :
+        if A[i][j] % 2 != 0 :
+          k1 += 1
+  if k1 == N :
+    print(k)
+    break
+  else :
+    k1 = 0
+    k += 1
+if k1 == 0 :
+  print("0 - таких столбцов нет")
