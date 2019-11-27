@@ -45,7 +45,7 @@ for i in range(N) :
   for j in range(N) :
     if j == 0 :
       MinPr *= A[i][j]
-while k != 3 :
+while k != N :
   for i in range(N) :
     for j in range(N) :
       if j == k :
