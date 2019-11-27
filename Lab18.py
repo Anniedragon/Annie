@@ -83,4 +83,6 @@ while k != N :
   Sum = 0
   SrAr = 0
   k += 1
-print(Count)
+print("\n")
+for i in Count :
+  print(i, end = " ")
