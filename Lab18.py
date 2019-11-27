@@ -56,3 +56,31 @@ while k != N :
   Pr = 1
   k += 1
 print("Наименьшее произведение",MinPr,"\n","Номер столбца",Num)
+
+#lab 18, task 4
+N = int(input("Введите к-во строк в массиве "))
+A = []
+Count = []
+k = 0
+k1 = 0
+SrAr = 0
+Sum = 0
+for i in range(N) :
+  A.append([int(j) for j in input().split()])
+while k != N :
+  for i in range(N) :
+    for j in range(N) :
+      if j == k :
+        Sum += A[i][j]
+  SrAr = Sum / N
+  for i in range(N) :
+    for j in range(N) :
+      if j == k :
+        if A[i][j] > SrAr :
+          k1 += 1
+  Count.append(k1)
+  k1 = 0
+  Sum = 0
+  SrAr = 0
+  k += 1
+print(Count)
