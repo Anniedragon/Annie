@@ -1,29 +1,20 @@
-#lab 18, task 1 IN PROGRESS (дико костыльный вариант)
+#lab 18, task 1
 N = int(input("Введите к-во строк в массиве "))
 A = []
 for i in range(N) :
   A.append([int(j) for j in input().split()])
-for i in range(N) :
-  for j in range(N) :
-    if j == 0 :
-      print(A[i][j])
-for i in range(N) :
-  for j in range(N) :
-    if (i == N-1) and (A[i][j] != A[N-1][0]) :
-      print(A[i][j])
-for i in range(N) :
-  for j in range(N) :
-    if (j == N-1) and (i != N-1) :
-      print(A[N-2-i][j])
-for i in range(N) :
-  for j in range(N) :
-    if (j != 0) and (j != N-1) and (i == 0) :
-      print(A[i][N-1-j])
-for i in range(N) :
-  for j in range(N) :
-    if (i != 0) and (i != N-1) and (j == 1) :
-      print(A[i][j])
-      . . .
+for k in range(N) :
+  for i in range(k,N-k) :
+    print(A[i][k])
+    x = i
+  for j in range(k+1,N-k) :
+    print(A[x][j])
+    y = j
+  for i in range(N-k-2,k-1,-1) :
+    print(A[i][y])
+    x = i
+  for j in range(N-k-2,k,-1) :
+    print(A[x][j])
       
 #lab 18, task 2
 N = int(input("Введите к-во строк в массиве "))
