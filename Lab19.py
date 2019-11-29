@@ -14,7 +14,7 @@ for i in range(N) :
 for i in range(N) :
   for j in range(M) :
     if j != M-1 :
-      print(A[i][j], end = " ")
+      print(A[i][j],"\t",end = "")
     else :
       print(A[i][j])
 print("\n")
@@ -38,6 +38,6 @@ for i in range(N) :
 for i in range(N) :
   for j in range(M) :
     if j != M-1 :
-      print(A[i][j], end = " ")
+      print(A[i][j],"\t",end = "")
     else :
       print(A[i][j])
