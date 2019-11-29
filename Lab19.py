@@ -82,3 +82,32 @@ for i in range(N) :
       print(A[i][j],"\t",end = "")
     else :
       print(A[i][j])
+
+#lab 19, task 3
+from random import randint
+N = int(input("Введите к-во строк, чётное "))
+M = int(input("Введите к-во элементов в строке, чётное "))
+temp = 0
+A = []
+for i in range(N) :
+  A.append([])
+  for j in range(M) :
+    A[i].append(randint(1, 10))
+for i in range(N) :
+  for j in range(M) :
+    if j != M-1 :
+      print(A[i][j],"\t",end = "")
+    else :
+      print(A[i][j])
+print("\n")
+for i in range(N//2) :
+  for j in range(M//2) :
+    temp = A[i][j]
+    A[i][j] = A[i + N//2][j + M//2]
+    A[i + N//2][j + M//2] = temp
+for i in range(N) :
+  for j in range(M) :
+    if j != M-1 :
+      print(A[i][j],"\t",end = "")
+    else :
+      print(A[i][j])
