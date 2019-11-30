@@ -142,3 +142,40 @@ for i in range(N) :
       print(A[i][j],"\t",end = "")
     else :
       print(A[i][j])
+
+#lab 19, task 5
+from random import randint
+N = int(input("Введите к-во строк "))
+k = 1
+Sum = 0
+SumD = []
+A = []
+for i in range(N) :
+  A.append([])
+  for j in range(N) :
+    A[i].append(randint(1, 10))
+for i in range(N) :
+  for j in range(N) :
+    if j != N-1 :
+      print(A[i][j],"\t",end = "")
+    else :
+      print(A[i][j])
+print("\n")
+while k != N :
+  for i in range(N) :
+    for j in range(N) :
+      if j == i-k :
+        Sum += A[i][j]
+  SumD.append(Sum)
+  Sum = 0
+  k += 1
+k = 1
+while k != N :
+  for i in range(N) :
+    for j in range(N) :
+      if j == i+k :
+        Sum += A[i][j]
+  SumD.append(Sum)
+  Sum = 0
+  k += 1  
+print(SumD)
