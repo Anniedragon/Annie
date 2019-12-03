@@ -17,3 +17,49 @@ class MainClass {
     }
   }
 }
+
+//lab 8(7), task 6
+using System;
+
+class MainClass {
+    
+    static void Main(string[] args) {
+            int a;
+            Console.Write("Введите количество элементов в массиве: ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("");
+            int[] arr = new int[a];
+            Random rand = new Random(); 
+            for (int i = 0; i < arr.Length; i++) {   
+                arr[i]= rand.Next(-99999, 99999);
+            }
+            int min, temp;
+    int length = arr.Length;
+    for (int i = 0; i < length - 1; i++)
+    {
+        min = i;
+  
+        for (int j = i + 1; j < length; j++)
+        {
+            if (arr[j] < arr[min])
+            {
+                min = j;
+            }
+        }
+  
+        if (min != i)
+        {
+            temp = arr[i];
+            arr[i] = arr[min];
+            arr[min] = temp;
+        }
+    }
+    Console.WriteLine("");
+            for (int i = 0; i < arr.Length; i++){
+                Console.Write(arr[i] + " ");
+            }
+            Console.WriteLine("");
+            Console.WriteLine("");
+}
+
+}
