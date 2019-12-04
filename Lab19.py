@@ -112,37 +112,44 @@ for i in range(N) :
     else :
       print(A[i][j])
 
-#lab 19, task 4 IN PROGRESS
+#lab 19, task 4
 from random import randint
-N = int(input("Введите к-во строк, чётное "))
-M = int(input("Введите к-во элементов в строке, чётное "))
-temp = 0
-gran = 0
-nte = 0
-Min = 0
 A = []
+flag = 0
+temp = 0
+N = int(input("Введите к-во строк "))
+M = int(input("Введите число элементов в строке "))
 for i in range(N) :
   A.append([])
   for j in range(M) :
-    A[i].append(randint(1, 10))
+      A[i].append(randint(1, 10))
 for i in range(N) :
   for j in range(M) :
-    if j != M-1 :
-      print(A[i][j],"\t",end = "")
-    else :
-      print(A[i][j])
-print("\n") 
+      if j != M-1 :
+          print(A[i][j],"\t",end = "")
+      else :
+          print(A[i][j])
+print("\n")
+while flag == 0 :
+  flag = 1
+  for i in range(N-1) :
+      if A[i][0] > A[i+1][0] :
+          for j in range(M) :
+             temp = A[i][j]
+             A[i][j] = A[i+1][j]
+             A[i+1][j] = temp
+  for i in range(N-1) :
+     for j in range(M) :
+        if j == 0 :
+           if A[i][j] > A[i+1][j] :
+              flag = 0
 for i in range(N) :
   for j in range(M) :
-    if j == 0 :
-      ... # надо дописать кусок кода
-for i in range(N) :
-  for j in range(M) :
-    if j != M-1 :
-      print(A[i][j],"\t",end = "")
-    else :
-      print(A[i][j])
-
+     if j != M-1 :
+        print(A[i][j],"\t",end = "")
+     else :
+         print(A[i][j])
+      
 #lab 19, task 5
 from random import randint
 N = int(input("Введите к-во строк "))
