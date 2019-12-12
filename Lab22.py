@@ -1,44 +1,20 @@
 #lab 22, task 1
-S = str(input("Введите строку, содержащую хотя бы 1 пробел\n "))
-for i in range(len(S)) :
-  if S[i] == " " :
-    S = S[i+1:]
-    break
-print(S)
-
-#lab 22, task 2
-S = "*"
-K = int(input("Введите к-во * в строке "))
-N = int(input("Введите к-во строк "))
-for i in range(N) :
-  print(S * K, end = "\n")
-
-#lab 22, task 3
-S = " " + str(input("Введите строку "))
-S = S.rstrip()
-S1 = str(input("Введите другую строку "))
-S = S.replace(" ", S1)
-print(S)
-
-#lab 22, task 4
-S = str(input("Введите строку "))
-S1 = ""
-for i in range(len(S)) :
-  if S[i] != " " :
-    S1 += S[i]
-  elif (S[i] == " ") and (S[i+1] != " ") :
-    S1 += S[i]
-print(S1)
-
-#lab 22, task 5
-S = str(input("Введите строку\n "))
+#C:\Users\agush\Desktop\Мосполитех. Программирование\example.txt
+print("Enter the full name(path) of the file ")
+path = str(input())
+element = ""
 k = 0
-k1 = 0
-for i in range(len(S)) :
-  if S[i] == " " :
-    k += 1
-  else :
-    if k == 5 :
-      k1 += 1
-    k = 0
-print("Количество абзацев в строке равно",k1)
+flag = 0
+textfile = []
+with open(path ,"r") as file :
+    element = file.read()
+for i in range(len(element)) :
+    if (element[i] == " ") and (flag == 0) :
+        k = i
+        flag = 1
+    textfile.append(element[i])
+del textfile[0:k+1]
+with open(path, "w") as file :
+    file.write("".join(textfile))
+with open(path, "r") as file :
+    print(file.read())
