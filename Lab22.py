@@ -37,4 +37,19 @@ file.close()
 with open(path, "r") as file :
     print(file.read())
     
+#lab 22, task 3
+#C:\Users\agush\Desktop\Мосполитех. Программирование\example.txt
+#C:\Users\agush\Desktop\Мосполитех. Программирование\example2.txt
+print("Enter the full name(path) of two files ")
+element = "" 
+path1 = str(input())
+path2 = str(input())
+file1 = open(path1, "a")
+file2 = open(path2, "r")
+element = file2.read()
+file1.write(element)
+file1.close()
+file2.close()
+with open(path1, "r") as file1 :
+    print(file1.read())
 
