@@ -53,3 +53,24 @@ file2.close()
 with open(path1, "r") as file1 :
     print(file1.read())
 
+#lab 22, task 4
+#C:\Users\agush\Desktop\Мосполитех. Программирование\test.txt
+print("Enter the full name of the file ")
+path = str(input())
+S = ""
+S1 = ""
+k = 0
+with open(path,'r') as file:
+    S = file.read()
+for i in range(len(S)) :
+    if S[i] != " " :
+        S1 += S[i]
+        k = 0
+    elif S[i] == " " :
+        k += 1 
+        if k == 1 :
+            S1 += S[i]
+with open(path, "w") as file :
+    file.write(S1)
+with open(path, "r") as file :
+    print(file.read())
