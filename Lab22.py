@@ -74,3 +74,21 @@ with open(path, "w") as file :
     file.write(S1)
 with open(path, "r") as file :
     print(file.read())
+
+#lab 22, task 5
+#C:\Users\agush\Desktop\Мосполитех. Программирование\text_for_task5.txt
+print("Enter the full name of the text file ")
+path = str(input())
+textfile = ""
+k = 0
+abz = 0
+with open(path, "r") as file :
+    textfile = file.read()
+for i in range(len(textfile)) :
+    if textfile[i] == " " :
+        k += 1
+    else :
+        k = 0
+    if k == 5 :
+        abz += 1
+print("К-во абзацев в текстовом файле равно",abz)
