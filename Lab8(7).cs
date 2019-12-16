@@ -70,23 +70,36 @@ namespace Lab8_task2
 
 //lab 8(7) task 3
 using System;
-class MainClass {
-  public static void Main (string[] args) {
-    int a, c;
-    int j = 0;  
-    int[] m = {0,0,0,0,0,0,0,0,0,0}; 
-    Console.WriteLine ("Cin number < 10000000000");
-    a = Convert.ToInt32(Console.ReadLine());
-    while (a > 0) {
-      c = a % 10;
-      a /= 10;
-      m[j] = c;
-      j++;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace Lab8_task3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите число: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int n, k;
+            while (N > 10)
+            {
+                n = N;
+                k = 0;
+                while (n > 10)
+                {
+                    n /= 10;
+                    k++;
+                }
+                Console.WriteLine(n);
+                N = N % Convert.ToInt32(Math.Pow(10, k));
+
+            }
+            Console.WriteLine(N);
+            Console.Read();
+        }
     }
-    for(int q = j - 1; q >= 0; q--){
-      Console.WriteLine (m[q]);
-    }
-  }
 }
 
 //lab 8(7), task 4
